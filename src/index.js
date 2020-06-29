@@ -1,2 +1,2 @@
 import './scss/main.scss';
-import'./js/input';
+import'./js/renderSearchResult';
