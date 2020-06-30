@@ -32,16 +32,15 @@ function renderResult(countries) {
     error({
       text: 'To many matches found. Please enter a more specific query!',
     });
+    return;
   }
   if (countries.length === 1) {
     clearSearch();
     refs.article.insertAdjacentHTML('beforeend', templateCountry(countries));
+    return;
   }
-  if (countries.length > 2 && countries.length < 11) {
-    clearSearch();
-    refs.searchHintsUl.insertAdjacentHTML(
-      'beforeend',
-      templateItems(countries),
-    );
-  }
+  clearSearch();
+  refs.searchHintsUl.insertAdjacentHTML('beforeend', templateItems(countries));
 }
+
+

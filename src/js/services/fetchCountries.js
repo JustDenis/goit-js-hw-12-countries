@@ -6,6 +6,5 @@ export default {
   sendRequest() {
      return fetch(baseUrl + this.searchedCountry)
       .then(res => res.json())
-      .then(countries => countries);
   },
 };
